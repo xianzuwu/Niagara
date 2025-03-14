@@ -120,3 +120,6 @@ A large portion of codes in this repo is based on [Flash3d](https://github.com/e
 + [MVDream](https://github.com/bytedance/MVDream)
 + [TensoRF](https://github.com/apchenstu/TensoRF)
 + [TriplaneGaussian](https://github.com/VAST-AI-Research/TriplaneGaussian)
++ [Unidepth](https://github.com/lpiccinelli-eth/UniDepth)
++ [Stable](https://github.com/Stable-X/StableNormal)
+
