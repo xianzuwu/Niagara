@@ -11,7 +11,7 @@
 </p>
 
 > [Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View]()  
-> [Xianzu Wu](https://xianzuwu.github.io/), [Zhengxing Ai](https://ai-kunkun.github.io/), [Harry Yang](https://leehomyc.github.io/), [Sernam Lim](https://scholar.google.com/citations?user=HX0BfLYAAAAJ&hl=en), [Jun Liu](https://wp.lancs.ac.uk/vl/), [Huan Wang](https://huanwang.tech/)
+> [Xianzu Wu](https://xianzuwu.github.io/), [Zhenxin Ai](https://ai-kunkun.github.io/), [Harry Yang](https://leehomyc.github.io/), [Sernam Lim](https://scholar.google.com/citations?user=HX0BfLYAAAAJ&hl=en), [Jun Liu](https://wp.lancs.ac.uk/vl/), [Huan Wang](https://huanwang.tech/)
 > *[]()*  
 
 ## 🦉 ToDo List
