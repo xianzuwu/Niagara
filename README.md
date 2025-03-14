@@ -1,6 +1,6 @@
 [![arXiv]()
-[![ProjectPage]()
-[![HuggingFace]() 
+[![ProjectPage](https://img.shields.io/badge/Project_Page-Niagara-blue?logoColor=blue)](https://ai-kunkun.github.io/Niagara_page/)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)() 
 !
 
 # Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View
@@ -15,7 +15,7 @@
 > *[]()*  
 
 # News
-- [x] `14.03.2025`: 
+- [x] `14.03.2025`: release code
 
 # Setup
 
