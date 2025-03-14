@@ -100,9 +100,12 @@ python train.py \
 
 For multiple GPU, we can run with this command:
 ```sh
-sh train.sh
+bash train.sh
 ```
-
+## inference
+```sh
+bash evaluate.sh
+```
 ## BibTeX
 ```
 
