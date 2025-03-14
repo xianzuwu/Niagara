@@ -1,7 +1,7 @@
-[![arXiv]()
+[![arXiv](https://img.shields.io/badge/arXiv-2406.04343-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/)
 [![ProjectPage](https://img.shields.io/badge/Project_Page-Niagara-blue?logoColor=blue)](https://ai-kunkun.github.io/Niagara_page/)
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)() 
-!
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)](https://huggingface.co/Xianzu/Niagara) 
+
 
 # Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View
 
@@ -14,10 +14,12 @@
 > [Xianzu Wu](https://xianzuwu.github.io/), [Zhengxing Ai](https://ai-kunkun.github.io/), [Harry Yang](https://leehomyc.github.io/), [Sernam Lim](https://scholar.google.com/citations?user=HX0BfLYAAAAJ&hl=en), [Jun Liu](https://wp.lancs.ac.uk/vl/), [Huan Wang](https://huanwang.tech/)
 > *[]()*  
 
-# News
-- [x] `14.03.2025`: release code
+## 🦉 ToDo List
+- [x] 📢`15.03.2025`: release code and paper
+- [ ] Release Complete Checkpoint.
 
-# Setup
+
+# 🚀Setup
 
 ## Create a python environment
 
@@ -50,7 +52,7 @@ pip install -r requirements-torch.txt --extra-index-url https://download.pytorch
 pip install -r requirements.txt
 ```
 
-## Download training data
+## 📝 Download training data
 
 ### RealEstate10K dataset
 
@@ -111,7 +113,7 @@ bash evaluate.sh
 
 ```
 
-## Acknowledgement
+## 📖Acknowledgement
 
 A large portion of codes in this repo is based on [Flash3d](https://github.com/eldar/flash3d), some of the code is borrowed from:
 
