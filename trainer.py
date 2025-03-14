@@ -58,24 +58,6 @@ class Trainer(nn.Module):
         # ssim_value = self.ssim(pred, target).mean()
         # print(f"SSIM value: {ssim_value.item()}")
         
-        # # 曝光调整
-        # adjusted_pred = torch.exp(self.a) * pred + self.b
-
-        # # 曝光补偿的 L1 损失
-        # exposure_l1_loss = (adjusted_pred - target).abs().mean()
-        # losses["loss/exposure_l1"] = exposure_l1_loss
-        
-        # # 根据 SSIM 值选择是使用曝光调整的图像还是原始图像
-        # if ssim_value < 0.5:
-        #     rec_loss += (1 - cfg.loss.ssim.weight) * exposure_l1_loss
-        # else:
-        #     l1_loss = (pred - target).abs().mean()
-        #     losses["loss/l1"] = l1_loss
-        #     rec_loss += (1 - cfg.loss.ssim.weight) * l1_loss
-        
-        # # 加入 SSIM 损失到总损失中
-        # rec_loss += cfg.loss.ssim.weight * ssim_value
-        
         if cfg.loss.lpips.weight > 0:
             if self.step > cfg.loss.lpips.apply_after_step:
                 lpips_loss = self.lpips.to(pred.device)((pred * 2 - 1).clamp(-1, 1), 
@@ -83,11 +65,6 @@ class Trainer(nn.Module):
                 losses["loss/lpips"] = lpips_loss
                 rec_loss += cfg.loss.lpips.weight * lpips_loss
             # Exposure Compensation Loss
-        # adjusted_pred = torch.exp(a) * pred + b
-        # if cfg.loss.exposure.weight > 0:
-        #     exposure_loss = (adjusted_pred - target).abs().mean()
-        #     losses["loss/exposure"] = exposure_loss
-        #     rec_loss += cfg.loss.exposure.weight * exposure_loss
         
         return rec_loss
     
@@ -118,17 +95,6 @@ class Trainer(nn.Module):
                 losses["loss/gauss_offset_reg"] = big_offset_reg_loss
                 total_loss += offs_lmbd * big_offset_reg_loss
 
-            # frame_ids = self.model.all_frame_ids(inputs)
-            # rec_loss = 0
-            # for frame_id in frame_ids:
-            #     target = inputs[("color_aug", frame_id, 0)]
-            #     target = target[:, :, cfg.dataset.pad_border_aug:target.shape[2] - cfg.dataset.pad_border_aug,
-            #                     cfg.dataset.pad_border_aug:target.shape[3] - cfg.dataset.pad_border_aug]
-            #     pred = outputs[("color_gauss", frame_id, 0)]
-            #     rec_loss += self.compute_reconstruction_loss(pred, target, losses)
-            # rec_loss /= len(frame_ids)
-            # losses["loss/rec"] = rec_loss
-            # total_loss += rec_loss
             frame_ids = self.model.all_frame_ids(inputs)
             rec_loss = 0
             for frame_id in frame_ids:

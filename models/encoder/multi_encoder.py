@@ -128,9 +128,6 @@ class UniDepthExtended(nn.Module):
             
     def forward(self, inputs):
         # If there is no depth in the input, use the pre-trained model to predict the depth
-        # print(“Input keys:”, inputs.keys()) # Print all keys
-        # print(“Does (‘unidepth’, 0, 0) exist:”, ('unidepth', 0, 0) in inputs.keys()) # Print if this key is in inputs
-        # print(“(‘unidepth’, 0, 0) in inputs.keys() and inputs[(‘unidepth’, 0, 0)] is not None”)
         
         # print(f"Forward inputs: {inputs}")
         if ('unidepth', 0, 0) in inputs.keys() and inputs[('unidepth', 0, 0)] is not None:
@@ -147,7 +144,6 @@ class UniDepthExtended(nn.Module):
             #     depth_outs = {"depth": default_depth}
             # print("No unidepth data found, skipping depth processing.")
             
-
         outputs_gauss = {}
         outputs_gauss[("K_src", 0)] = inputs.get(("K_src", 0), depth_outs.get("intrinsics"))
         # outputs_gauss[("inv_K_src", 0)] = torch.linalg.inv(outputs_gauss[("K_src", 0)])

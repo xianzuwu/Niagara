@@ -8,10 +8,10 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5
 
 # Defines the action to be performed when Ctrl + C is pressed
 cleanup() {
-  echo "正在清理进程..."
+  echo "The process is being cleaned up..."
   if [ -n "$YOUR_PID" ]; then
     kill -- -$YOUR_PID 2>/dev/null
-    echo "进程组 $YOUR_PID 已结束。"
+    echo "The process group $YOUR_PID has ended."
   fi
   exit 0
 }
@@ -26,7 +26,7 @@ python train.py -m \
   train.logging=true
 
 YOUR_PID=$!
-echo "后台进程组 $YOUR_PID 已启动。"
+echo "The background process group $YOUR_PID has been started."
 
 wait $YOUR_PID
 
