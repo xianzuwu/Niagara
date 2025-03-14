@@ -1,7 +1,7 @@
 [![arXiv]()
 [![ProjectPage]()
 [![HuggingFace]() 
-
+!
 
 # Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View
 
