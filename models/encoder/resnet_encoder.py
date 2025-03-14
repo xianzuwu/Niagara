@@ -139,7 +139,4 @@ class ResnetEncoder(nn.Module):
         features.append(encoder.layer3(features[-1]))
         features.append(encoder.layer4(features[-1]))
 
-        # Debug print to check features at different layers
-        # print(f"Features at different layers: {[f.shape for f in features]}")
-
         return features

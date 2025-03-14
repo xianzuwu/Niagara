@@ -46,8 +46,6 @@ class Re10KDataset(data.Dataset):
 
         self.depth_path = None #self.cfg.dataset.depth_path
         self.normal_path = self.cfg.dataset.normal_path
-        # print(f"The normal path is: {self.normal_path}")
-        # print(f"The depth path is: {self.depth_path}")
         if self.cfg.dataset.preload_depths:
             assert cfg.dataset.depth_path is not None
             self.depth_path = Path(self.cfg.dataset.depth_path)
@@ -120,18 +118,12 @@ class Re10KDataset(data.Dataset):
             self._seq_key_src_idx_pairs = self._load_split_indices(test_split_path)
 
         self.length = len(self._seq_key_src_idx_pairs)
-        # print('aizhenxin sb')
-        # print(cfg.dataset.from_tar and self.is_train)
         if cfg.dataset.from_tar and self.is_train:
             fn = self.data_path / "all.train.tar"
             self.images_dataset = TarDataset(archive=fn, extensions=(".jpg", ".pickle"))
             self.pcl_dataset = self.images_dataset
         else:
-            # print('aikunkun start')
-            # print(cfg.dataset.test_split_path )
             fn = self.data_path / f"pcl.{self.split_name_for_loading}.tar"
-            # print('aikunkun go work')
-            # print(cfg.dataset.copy_to_local)
             cfg.dataset.copy_to_local = False
             if cfg.dataset.copy_to_local:
                 pcl_fn = copy_to_local_storage(fn)
@@ -163,38 +155,21 @@ class Re10KDataset(data.Dataset):
             key_id_pairs += seq_key_id_pairs
         return key_id_pairs
     
-    # def _load_sparse_pcl(self, seq_key):
-    #     fn = f"pcl.{self.split_name_for_loading}/{seq_key}.pickle.gz"
-    #     if self.cfg.dataset.from_tar:
-    #         f = self.pcl_dataset.get_file(fn)
-    #         data = gzip.decompress(f.read())
-    #         return pickle.loads(data)
-    #     else:
-    #         fn = self.pcl_dir / fn
-    #         with gzip.open(fn, "rb") as f:
-    #             data = pickle.load(f)
-    #         return data 
     def _load_sparse_pcl(self, seq_key, frame_idx=None):
         if frame_idx is not None:
             seq_key = f"{seq_key}_{frame_idx}"
         
         fn = f"pcl.{self.split_name_for_loading}/{seq_key}.pickle.gz"
-        # print(self.split_name_for_loading)
-        # print(fn)
         try:
             if self.cfg.dataset.from_tar:
                 f = self.pcl_dataset.get_file(fn)
                 data = gzip.decompress(f.read())
                 return pickle.loads(data)
             else:
-                fkd = "/home/wuxianzu/Projects/flash3d/flash3d/tmp/monosplat"
-                # print(fkd)
+                fkd = "/home/wuxianzu/Projects/man/Niagara/tmp/monosplat"
                 fn_path = os.path.join(fkd, fn)
-                # fn_path = self.pcl_dir / fn
-                # print(fn_path)
                 if not os.path.exists(fn_path):
                     raise FileNotFoundError(f"File {fn_path} does not exist.")
-                # print(fn_path)
                 
                 with gzip.open(fn_path, "rb") as f:
                     data = pickle.load(f)
@@ -214,7 +189,7 @@ class Re10KDataset(data.Dataset):
         if self.cfg.dataset.from_tar and self.is_train:
             img = self.images_dataset.get_image(img_file, pil=True)
             img = img.convert('RGB')
-            # print("what image")
+
         else:
             img = self.loader(path / img_file)
         return img
@@ -224,19 +199,16 @@ class Re10KDataset(data.Dataset):
             path = self.depth_path / f"{self.split_name_for_loading}"
             depth_file = f"{key}/{timestamp}.png"
             if os.path.exists(path / depth_file):
-                # print(f"Depth file exists at {path / depth_file}")
                 depth = Image.open(path / depth_file)
                 depth_array = np.array(depth)
-                            # 打印depth图像的元数据
-                # print(f"Depth image metadata (depth.info): {depth.info}")
+
                 # Scale the saved image using the metadata
                 max_value = float(depth_array.max())
                 min_value = float(depth_array.min())
-                # print('max_value')
+
                 # Scale from uint16 range
                 depth = (np.array(depth).astype(np.float32) / (2 ** 16 - 1)) * (max_value - min_value) + min_value
             else:
-                # print("Depth file {} is not exist", path / depth_file)
                 depth = None
             return depth
     
@@ -244,7 +216,6 @@ class Re10KDataset(data.Dataset):
         timestamp = self._seq_data[key]["timestamps"][id]
         path = self.normal_path / f"{self.split_name_for_loading}"
         normal_file = f"{key}/{timestamp}.jpg"
-        # print("what")
         
         if os.path.exists(path / normal_file):
             # Load the normal map image (assuming it's saved in PNG format)
@@ -297,7 +268,7 @@ class Re10KDataset(data.Dataset):
             depth = None
             # print("depth path is None")
         #
-        if self.normal_path is not None:  # 假设您有一个配置项来控制是否使用 normal
+        if self.normal_path is not None:  
             # print("normal path is not None")
             normal = self._load_normal(seq_key, frame_idx)
             if normal is not None:
@@ -305,7 +276,6 @@ class Re10KDataset(data.Dataset):
                 normal = F.interpolate(normal[None,...], size=self.image_size, mode="nearest")[0]
         else:
             normal = None
-            # print("normal path is None")
 
         # load the intrinsics matrix
         K = process_projs(pose_data["intrinsics"][frame_idx])
@@ -344,7 +314,7 @@ class Re10KDataset(data.Dataset):
     
     def __getitem__(self, index):
         inputs = {}
-        max_attempts = len(self._seq_key_src_idx_pairs)   # 最大重试次数，确保不会陷入死循环
+        max_attempts = len(self._seq_key_src_idx_pairs)   
 
         for attempt in range(max_attempts):
             try:
@@ -381,7 +351,7 @@ class Re10KDataset(data.Dataset):
                     color_aug = T.ColorJitter(self.brightness, self.contrast, self.saturation, self.hue)
                 else:
                     color_aug = lambda x: x
-                # print("输入的 keys:", inputs.keys())  # 打印所有的 keys
+                # print(“inputs keys:”, inputs.keys()) # print all keys
 
                 for frame_name, frame_idx in zip(frame_names, src_and_tgt_frame_idxs):
                     inputs_K_tgt, inputs_K_src, inputs_inv_K_src, inputs_color, inputs_color_aug, inputs_T_c2w, orig_size, inputs_depth, inputs_normal = self.get_frame_data(
@@ -419,7 +389,6 @@ class Re10KDataset(data.Dataset):
                                     self.cfg.dataset.pad_border_aug:W-self.cfg.dataset.pad_border_aug],
                                 inputs[("depth_sparse", frame_name)]
                             )
-                    # print("输入的 keys:", inputs.keys())  # 打印所有的 keys
 
                 return inputs
 
