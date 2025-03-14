@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set tmp
-export TMPDIR=/home/wuxianzu/Projects/flash3d/flash3d/tmp
+export TMPDIR=/home/wuxianzu/Projects/man/Niagara/tmp
 
 # Set visible GPU devices (e.g., use GPUs #0-3)
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5
