@@ -1,0 +1,21 @@
+name: kitti
+data_path: /datasets2/kitti_raw
+pose_path: /home/wuxianzu/Projects/flash3d/man/flash3d/datasets/kitti_raw/orb-slam_poses
+depth_path: null
+split_path: /home/wuxianzu/Projects/flash3d/man/flash3d/splits
+split: tulsiani2 # tulsiani2
+png: True
+
+height: 256
+width: 384
+
+znear: 0.01
+zfar: 100.0
+stereo: true
+color_aug: false
+keep_aspect_ratio: false
+precise_intrinsics: true
+flip_left_right: false
+pad_border_aug: 64
+
+scale_pose_by_depth: false
