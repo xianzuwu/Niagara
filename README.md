@@ -1,10 +1,10 @@
-[![arXiv](https://img.shields.io/badge/arXiv-2406.04343-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/)
+<!-- [![arXiv](https://img.shields.io/badge/arXiv-2406.04343-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/)
 [![ProjectPage](https://img.shields.io/badge/Project_Page-Niagara-blue?logoColor=blue)](https://ai-kunkun.github.io/Niagara_page/)
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)](https://huggingface.co/Xianzu/Niagara) 
-
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)](https://huggingface.co/Xianzu/Niagara)  -->
 <p align="center">
 
-  <h2 align="center">Niagara<br> Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View</h2>
+  <h2 align="center">Niagara<br><span style="font-size: 0.58em;">
+   Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View</h2>
   <p align="center">
     <a href="https://xianzuwu.github.io/"><strong>Xianzu Wu</strong></a>
     ·
@@ -33,7 +33,8 @@
     <a href='https://ai-kunkun.github.io/Niagara_page/'>
       <img src='https://img.shields.io/badge/Project-Page-orange?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=D35400' alt='Project Page'></a>
     <a href="https://huggingface.co/Xianzu/Niagara)">
-      <img src='https://img.shields.io/badge/Code-Github-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=181717' alt='Code Github'></a>
+      <img src='https://img.shields.io/badge/Code-Github-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=181717' alt='Code Github'></a> 
+      <br>
       <a href="https://huggingface.co/Xianzu/Niagara)">
       <img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow' alt='Huggingface'></a>
   </p>
