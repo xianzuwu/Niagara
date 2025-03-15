@@ -24,13 +24,3 @@ python evaluate.py \
 #     run.weights_path=/home/wuxianzu/Projects/man/Niagara/exp/re10k_v2/checkpoints/model_re10k_v54.pth \
 #     model.depth.version=v1 \
 #     ++eval.save_vis=false
-
-# # # # # # #  NYUV2 testing
-# python evaluate.py \
-#     hydra.run.dir=$1 \
-#     hydra.job.chdir=true \
-#     +experiment=layered_nyuv2 \
-#     +dataset.crop_border=true \
-#     dataset.split_path=splits/nyuv2/val_files.txt \
-#     model.depth.version=v1 \
-#     ++eval.save_vis=false

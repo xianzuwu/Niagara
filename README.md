@@ -108,7 +108,20 @@ python -m datasets.preprocess_realestate10k -d data/RealEstate10K -s train
 python -m datasets.preprocess_realestate10k -d data/RealEstate10K -s test
 ```
 
-## 🧩Download and evaluate the pretrained model
+### 🧩KITTI dataset
+For downloading the KITTI dataset, we base our instructions on the [versatran01](https://gist.github.com/versatran01/19bbb78c42e0cafb1807625bbb99bd85) scripts.
+```sh
+cd kitti_raw
+wget -nc -i kitti_archives.txt
+```
+This step will take in some time to complete. Finally, the KITTI download data you need to extract.
+```sh
+unzip "*drive*.zip" "*/*/image*"
+unzip "*drive*.zip" "*/*/oxts*"
+unzip "*calib*.zip"
+```
+
+### 🧩Download and evaluate the pretrained model
 
 We provide model weights that could be downloaded and evaluated on RealEstate10K test set:
 
