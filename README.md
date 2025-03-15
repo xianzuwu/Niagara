@@ -124,7 +124,7 @@
       <td>0.179</td>
     </tr>
     <tr>
-      <td><a href="https://github.com/eldar/flash3d"><strong>Flash3D</strong></a></td>
+      <td><a href="https://github.com/eldar/flash3d"><em>Flash3D</em></a></td>
       <td><em>28.46</em></td>
       <td><em>0.899</em></td>
       <td><em>0.100</em></td>
