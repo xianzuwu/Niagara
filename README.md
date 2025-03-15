@@ -289,7 +289,7 @@ bash evaluate.sh
 
 ## 📖Acknowledgement
 
-A large portion of codes in this repo is based on [Flash3d](https://github.com/eldar/flash3d), some of the code is borrowed from:
+A large portion of codes in this repo is based on [Flash3D](https://github.com/eldar/flash3d), some of the code is borrowed from:
 
 + [MVDream](https://github.com/bytedance/MVDream)
 + [TensoRF](https://github.com/apchenstu/TensoRF)
