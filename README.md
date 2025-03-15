@@ -32,10 +32,10 @@
     </a>
     <a href='https://ai-kunkun.github.io/Niagara_page/'>
       <img src='https://img.shields.io/badge/Project-Page-orange?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=D35400' alt='Project Page'></a>
-    <a href="https://huggingface.co/Xianzu/Niagara)">
+    <a href="https://github.com/xianzuwu/Niagara">
       <img src='https://img.shields.io/badge/Code-Github-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=181717' alt='Code Github'></a> 
       <br>
-      <a href="https://huggingface.co/Xianzu/Niagara)">
+      <a href="https://huggingface.co/Xianzu/Niagara">
       <img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow' alt='Huggingface'></a>
   </p>
   
