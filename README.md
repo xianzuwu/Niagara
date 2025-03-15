@@ -3,7 +3,7 @@
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)](https://huggingface.co/Xianzu/Niagara)  -->
 <p align="center">
 
-  <h2 align="center">Niagara<br><span style="font-size: 0.58em;">
+  <h2 align="center">🐃Niagara<br><span style="font-size: 0.58em;">
    Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View</h2>
   <p align="center">
     <a href="https://xianzuwu.github.io/"><strong>Xianzu Wu</strong></a>
