@@ -45,6 +45,111 @@
 - [x] 📢`15.03.2025`: release code and paper
 - [ ] Release Complete Checkpoint.
 
+## 🎉 Key Result
+
+<table style="font-size: 9px; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="padding: 4px;">Method</th>
+      <th style="padding: 4px;">PSNR (5f)</th>
+      <th style="padding: 4px;">SSIM (5f)</th>
+      <th style="padding: 4px;">LPIPS (5f)</th>
+      <th style="padding: 4px;">PSNR (10f)</th>
+      <th style="padding: 4px;">SSIM (10f)</th>
+      <th style="padding: 4px;">LPIPS (10f)</th>
+      <th style="padding: 4px;">PSNR (u[-30,30]f)</th>
+      <th style="padding: 4px;">SSIM (u[-30,30]f)</th>
+      <th style="padding: 4px;">LPIPS (u[-30,30]f)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/facebookresearch/synsin"><strong>Syn-Sin</strong></a></td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>22.30</td>
+      <td>0.740</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><a href="https://single-view-mpi.github.io/"><strong>SV-MPI</strong></a> </td>
+      <td>27.10</td>
+      <td>0.870</td>
+      <td>-</td>
+      <td>24.40</td>
+      <td>0.812</td>
+      <td>-</td>
+      <td>23.52</td>
+      <td>0.785</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Brummi/BehindTheScenes"><strong>BTS</strong></a> </td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>24.00</td>
+      <td>0.755</td>
+      <td>0.194</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/szymanowiczs/splatter-image"><strong>Splatter Image</strong></a></td>
+      <td>28.15</td>
+      <td>0.894</td>
+      <td>0.110</td>
+      <td>25.34</td>
+      <td>0.842</td>
+      <td>0.144</td>
+      <td>24.15</td>
+      <td>0.810</td>
+      <td>0.177</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/vincentfung13/MINE"><strong>MINE</strong></a></td>
+      <td>28.45</td>
+      <td>0.897</td>
+      <td>0.111</td>
+      <td>25.89</td>
+      <td>0.850</td>
+      <td>0.150</td>
+      <td>24.75</td>
+      <td>0.820</td>
+      <td>0.179</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/eldar/flash3d"><strong>Flash3D</strong></a></td>
+      <td><em>28.46</em></td>
+      <td><em>0.899</em></td>
+      <td><em>0.100</em></td>
+      <td><em>25.94</em></td>
+      <td><em>0.857</em></td>
+      <td><em>0.133</em></td>
+      <td><em>24.93</em></td>
+      <td><em>0.833</em></td>
+      <td><em>0.160</em></td>
+    </tr>
+    <tr>
+      <td><strong>Ours</strong></td>
+      <td><strong>29.00</strong></td>
+      <td><strong>0.904</strong></td>
+      <td><strong>0.099</strong></td>
+      <td><strong>26.30</strong></td>
+      <td><strong>0.862</strong></td>
+      <td><strong>0.131</strong></td>
+      <td><strong>25.28</strong></td>
+      <td><strong>0.836</strong></td>
+      <td><strong>0.156</strong></td>
+    </tr>
+  </tbody>
+</table>
+<strong> Novel view synthesis comparison on the RealEstate10K dataset. </strong>Following <a href="https://github.com/eldar/flash3d"><strong>Flash3D</strong></a>, we evaluate our method on the in-domain novel view synthesis task. As seen, our model consistently outperforms existing methods across different frame counts (f as frames,5 frames, 10 frames, u[-30,30] frames), in terms of PSNR, SSIM, and LPIPS. (The <strong>best</strong> results are in bold, and the <em>second best</em> is slanting typeface. )
 
 # 🚀Setup
 
