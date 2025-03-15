@@ -165,7 +165,8 @@
       Check out more visual results
     </button>
   </a>
-
+</p>
+<p align="center" style="margin: 1rem 0;">
   <!-- 第二个按钮：Arxiv 颜色（示例用 #A0D468） -->
   <a href="https://ai-kunkun.github.io/Niagara_page/" style="display: inline-block;">
     <button 
