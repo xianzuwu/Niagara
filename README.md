@@ -207,6 +207,12 @@ Finally, install the required packages as follows:
 pip install -r requirements-torch.txt --extra-index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 ```
+## 🛠️Add 3DGS python environment
+```sh
+git clone diff-gaussian-rasterization @ git+https://github.com/eldar/diff-gaussian-rasterization-w-pose@main
+git submodule add diff-gaussian-rasterization @ git+https://github.com/eldar/diff-gaussian-rasterization-w-pose@main third_party/diff-gaussian-rasterization-w-pose
+git submodule update --init --recursive
+```
 
 ## 📝 Download training data
 
