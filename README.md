@@ -2,17 +2,43 @@
 [![ProjectPage](https://img.shields.io/badge/Project_Page-Niagara-blue?logoColor=blue)](https://ai-kunkun.github.io/Niagara_page/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)](https://huggingface.co/Xianzu/Niagara) 
 
+<p align="center">
 
-# Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View
+  <h2 align="center">Niagara<br> Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View</h2>
+  <p align="center">
+    <a href="https://xianzuwu.github.io/"><strong>Xianzu Wu</strong></a>
+    ·
+    <a href="https://ai-kunkun.github.io/"><strong>Zhenxin Ai</strong></a>
+    ·
+    <a href="https://leehomyc.github.io/"><strong>Harry Yang</strong></a>
+    ·
+    <a href="https://scholar.google.com/citations?user=HX0BfLYAAAAJ&hl=en"><strong>Sernam Lim</strong></a>
+    ·
+    <a href="https://wp.lancs.ac.uk/vl/"><strong>Jun Liu</strong></a>
+    ·
+    <a href="https://huanwang.tech/"><strong>Huan Wang</strong></a>
+    <br>
+  </p>
 
 
 <p align="center">
   <img src="assets/teaser_video.gif" alt="animated" />
 </p>
 
-> [Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View]()  
-> [Xianzu Wu](https://xianzuwu.github.io/), [Zhenxin Ai](https://ai-kunkun.github.io/), [Harry Yang](https://leehomyc.github.io/), [Sernam Lim](https://scholar.google.com/citations?user=HX0BfLYAAAAJ&hl=en), [Jun Liu](https://wp.lancs.ac.uk/vl/), [Huan Wang](https://huanwang.tech/)
-> *[]()*  
+<p align="center">
+  </br>
+    <a href="https://arxiv.org/">
+      <img src='https://img.shields.io/badge/Paper-Arxiv-green?style=for-the-badge&logo=adobeacrobatreader&logoWidth=20&logoColor=white&labelColor=66cc00&color=94DD15' alt='Paper PDF'>
+    </a>
+    <a href='https://ai-kunkun.github.io/Niagara_page/'>
+      <img src='https://img.shields.io/badge/Project-Page-orange?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=D35400' alt='Project Page'></a>
+    <a href="https://huggingface.co/Xianzu/Niagara)">
+      <img src='https://img.shields.io/badge/Code-Github-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=181717' alt='Code Github'></a>
+      <a href="https://huggingface.co/Xianzu/Niagara)">
+      <img src='https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow' alt='Huggingface'></a>
+  </p>
+  
+</p>
 
 ## 🦉 ToDo List
 - [x] 📢`15.03.2025`: release code and paper
@@ -21,7 +47,7 @@
 
 # 🚀Setup
 
-## Create a python environment
+## 🛠️Create a python environment
 
 Niagara has been trained and tested with the followings software versions:
 
@@ -54,7 +80,7 @@ pip install -r requirements.txt
 
 ## 📝 Download training data
 
-### RealEstate10K dataset
+### 🧩RealEstate10K dataset
 
 For downloading the RealEstate10K dataset we base our instructions on the [Behind The Scenes](https://github.com/Brummi/BehindTheScenes/tree/main?tab=readme-ov-file#-datasets) scripts.
 First you need to download the video sequence metadata including camera poses from https://google.github.io/realestate10k/download.html and unpack it into `data/` such that the folder layout is as follows:
@@ -81,7 +107,7 @@ python -m datasets.preprocess_realestate10k -d data/RealEstate10K -s train
 python -m datasets.preprocess_realestate10k -d data/RealEstate10K -s test
 ```
 
-## Download and evaluate the pretrained model
+## 🧩Download and evaluate the pretrained model
 
 We provide model weights that could be downloaded and evaluated on RealEstate10K test set:
 
@@ -89,8 +115,13 @@ We provide model weights that could be downloaded and evaluated on RealEstate10K
 python -m misc.download_pretrained_models -o exp/re10k_v2
 sh evaluate.sh exp/re10k_v2
 ```
-
-## Training
+Huggingface login (国内需要先 export HF_ENDPOINT=https://hf-mirror.com)
+```
+huggingface-cli login 
+# Then input your huggingface token for authentication
+```
+## 🏃‍♂️ Run the Code
+### 🧩Training
 
 In order to train the model on RealEstate10K dataset execute this command:
 ```sh
@@ -104,11 +135,11 @@ For multiple GPU, we can run with this command:
 ```sh
 bash train.sh
 ```
-## inference
+### 🧩inference
 ```sh
 bash evaluate.sh
 ```
-## BibTeX
+## 📑BibTeX
 ```
 
 ```
@@ -121,5 +152,5 @@ A large portion of codes in this repo is based on [Flash3d](https://github.com/e
 + [TensoRF](https://github.com/apchenstu/TensoRF)
 + [TriplaneGaussian](https://github.com/VAST-AI-Research/TriplaneGaussian)
 + [Unidepth](https://github.com/lpiccinelli-eth/UniDepth)
-+ [Stable](https://github.com/Stable-X/StableNormal)
++ [StableNormal](https://github.com/Stable-X/StableNormal)
 
