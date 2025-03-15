@@ -164,7 +164,8 @@
      ">
     Check out more visual results
   </a>
-
+</p>
+<p align="center" style="margin: 1rem 0;">
   <!-- 第二个按钮：Arxiv 颜色 -->
   <a href="https://ai-kunkun.github.io/Niagara_page/"
      style="
