@@ -150,30 +150,37 @@
   </tbody>
 </table>
 <strong> Novel view synthesis comparison on the RealEstate10K dataset. </strong>Following <a href="https://github.com/eldar/flash3d"><strong>Flash3D</strong></a>, we evaluate our method on the in-domain novel view synthesis task. As seen, our model consistently outperforms existing methods across different frame counts (f as frames,5 frames, 10 frames, u[-30,30] frames), in terms of PSNR, SSIM, and LPIPS. (The <strong>best</strong> results are in bold, and the <em>second best</em> is slanting typeface. )<br>
-<p style="text-align:center;">
-  <!-- Visual results 按钮（Project Page 颜色） -->
-  <a href="https://ai-kunkun.github.io/Niagara_page/" style="display: inline-block; margin-right: 8px;">
-    <button
-      class="button is-primary is-small toggle-videos-btn"
-      style="background-color: #CF6F1C; color: #fff; border: none;"
-      onclick="toggleMoreVideos()"
-    >
+<p align="center" style="margin: 1rem 0;">
+  <!-- 第一个按钮：Project Page 颜色（示例用 #CF6F1C） -->
+  <a href="https://ai-kunkun.github.io/Niagara_page/" style="display: inline-block; margin-right: 1rem;">
+    <button 
+      style="
+        font-size: 0.8rem; 
+        padding: 0.5rem 1rem; 
+        background-color: #CF6F1C; 
+        color: #fff; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer;">
       Check out more visual results
     </button>
   </a>
-</p> 
-<p style="text-align:center;">
-   <!-- Numerical results 按钮（Arxiv 颜色） -->
+
+  <!-- 第二个按钮：Arxiv 颜色（示例用 #A0D468） -->
   <a href="https://ai-kunkun.github.io/Niagara_page/" style="display: inline-block;">
-    <button
-      class="button is-primary is-small toggle-videos-btn"
-      style="background-color: #A0D468; color: #fff; border: none;"
-      onclick="toggleMoreVideos()"
-    >
+    <button 
+      style="
+        font-size: 0.8rem; 
+        padding: 0.5rem 1rem; 
+        background-color: #A0D468; 
+        color: #fff; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer;">
       Check out more numerical results
     </button>
   </a>
-</p> 
+</p>
 
 # 🚀Setup
 
