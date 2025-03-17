@@ -28,8 +28,8 @@
 <p align="center">
   </br>
     <a href="https://arxiv.org/">
-      <img src='https://img.shields.io/badge/Paper-Arxiv-green?style=for-the-badge&logo=adobeacrobatreader&logoWidth=20&logoColor=white&labelColor=66cc00&color=94DD15' alt='Paper PDF'>
-    </a>
+      <img src='https://img.shields.io/badge/Paper-Arxiv-red?style=for-the-badge&logo=arXiv&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203
+      ' alt='Paper PDF'> </a>
     <a href='https://ai-kunkun.github.io/Niagara_page/'>
       <img src='https://img.shields.io/badge/Project-Page-orange?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=D35400' alt='Project Page'></a>
     <a href="https://github.com/xianzuwu/Niagara">
@@ -41,7 +41,7 @@
 </p>
 
 ## 🦉 ToDo List
-- [x] 📢`15.03.2025`: release code and paper
+- [x] 📢`18.03.2025`: release code and paper
 - [ ] Release Complete Checkpoint.
 
 ## 🎉 Key Result
@@ -148,35 +148,18 @@
     </tr>
   </tbody>
 </table>
-<strong> Novel view synthesis comparison on the RealEstate10K dataset. </strong>Following <a href="https://github.com/eldar/flash3d"><strong>Flash3D</strong></a>, we evaluate our method on the in-domain novel view synthesis task. As seen, our model consistently outperforms existing methods across different frame counts (f as frames,5 frames, 10 frames, u[-30,30] frames), in terms of PSNR, SSIM, and LPIPS. (The <strong>best</strong> results are in bold, and the <em>second best</em> is slanting typeface. )<br>
-<p align="center" style="margin: 1rem 0;">
-  <!-- 第一个按钮：Project Page 颜色 -->
-  <a href="https://ai-kunkun.github.io/Niagara_page/"
-     style="
-       display: inline-block;
-       background-color: #CF6F1C;
-       color: #fff;
-       padding: 0.5rem 1rem;
-       text-decoration: none;
-       border-radius: 4px;
-       margin-right: 1rem;
-     ">
-    Check out more visual results
-  </a>
-</p>
-<p align="center" style="margin: 1rem 0;">
-  <!-- 第二个按钮：Arxiv 颜色 -->
-  <a href="https://ai-kunkun.github.io/Niagara_page/"
-     style="
-       display: inline-block;
-       background-color: #A0D468;
-       color: #fff;
-       padding: 0.5rem 1rem;
-       text-decoration: none;
-       border-radius: 4px;
-     ">
-    Check out more numerical results
-  </a>
+<strong> Novel view synthesis comparison on the RealEstate10K dataset. </strong>Following <a href="https://github.com/eldar/flash3d"><strong>Flash3D</strong></a>, we evaluate our method on the in-domain novel view synthesis task. As seen, our model consistently outperforms existing methods across different frame counts (f as frames,5 frames, 10 frames, u[-30,30] frames), in terms of PSNR, SSIM, and LPIPS. (The <strong>best</strong> results are in bold, and the <em>second best</em> is slanting typeface. ), and more result will be viewed from the two bottons entrances below.<br>
+
+<p align="center">
+  </br>
+    <a href="https://ai-kunkun.github.io/Niagara_page/">
+      <img src='https://img.shields.io/badge/Visual-Results-green?style=for-the-badge&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Visual Result'> </a>
+    <a href='https://arxiv.org/'>
+      <img src='https://img.shields.io/badge/Numerical-Results-green?style=for-the-badge&logoColor=white&logoSize=40&labelColor=252%2C%20236%2C%203
+      ' alt='Project Page'></a>
+
+  </p>
+  
 </p>
 
 # 🚀Setup
