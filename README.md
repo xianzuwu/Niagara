@@ -152,10 +152,9 @@
 <p align="center">
   </br>
     <a href="https://ai-kunkun.github.io/Niagara_page/">
-      <img src='https://img.shields.io/badge/Visual-Results-green?style=for-the-badge&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Visual Result'> </a>
+      <img src='https://img.shields.io/badge/Visual-Results-green?style=for-the-badge&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Visual Result'></a>
     <a href='https://arxiv.org/'>
-      <img src='https://img.shields.io/badge/Numerical-Results-green?style=for-the-badge&logoColor=white&logoSize=40&labelColor=252%2C%20236%2C%203
-      ' alt='Project Page'></a>
+      <img src='https://img.shields.io/badge/Numerical-Results-green?style=for-the-badge&logoColor=white&logoSize=40&labelColor=252%2C%20236%2C%203' alt='Project Page'></a>
 
   </p>
   
