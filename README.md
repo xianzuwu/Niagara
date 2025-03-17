@@ -28,7 +28,7 @@
 <p align="center">
   </br>
     <a href="https://arxiv.org/">
-      <img src='https://img.shields.io/badge/Paper-Arxiv-red?style=for-the-badge&logo=arXiv&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Paper PDF'> </a>
+      <img src='https://img.shields.io/badge/Paper-Arxiv-red?style=for-the-badge&logo=arXiv&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Paper PDF'></a>
     <a href='https://ai-kunkun.github.io/Niagara_page/'>
       <img src='https://img.shields.io/badge/Project-Page-orange?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=D35400' alt='Project Page'></a>
     <a href="https://github.com/xianzuwu/Niagara">
