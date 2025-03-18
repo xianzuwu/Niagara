@@ -1,4 +1,4 @@
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-2406.04343-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/)
+<!-- [![arXiv](https://img.shields.io/badge/arXiv-2503.0567-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/)
 [![ProjectPage](https://img.shields.io/badge/Project_Page-Niagara-blue?logoColor=blue)](https://ai-kunkun.github.io/Niagara_page/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow)](https://huggingface.co/Xianzu/Niagara)  -->
 <p align="center">
@@ -27,7 +27,7 @@
 
 <p align="center">
   </br>
-    <a href="https://arxiv.org/">
+    <a href="https://arxiv.org/pdf/2503.12553">
       <img src='https://img.shields.io/badge/Paper-Arxiv-red?style=for-the-badge&logo=arXiv&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Paper PDF'></a>
     <a href='https://ai-kunkun.github.io/Niagara_page/'>
       <img src='https://img.shields.io/badge/Project-Page-orange?style=for-the-badge&logo=Google%20chrome&logoColor=white&labelColor=D35400' alt='Project Page'></a>
@@ -154,7 +154,7 @@
   </br>
     <a href="https://ai-kunkun.github.io/Niagara_page/">
       <img src='https://img.shields.io/badge/Visual-Results-green?style=for-the-badge&logoColor=white&logoSize=20&labelColor=252%2C%20236%2C%203' alt='Visual Result'></a>
-    <a href='https://arxiv.org/'>
+    <a href='https://arxiv.org/pdf/2503.12553'>
       <img src='https://img.shields.io/badge/Numerical-Results-green?style=for-the-badge&logoColor=white&logoSize=40&labelColor=252%2C%20236%2C%203' alt='Project Page'></a>
 
   </p>
@@ -276,7 +276,13 @@ bash evaluate.sh
 ```
 ## 📑BibTeX
 ```
-
+@article{wu2025niagara,
+      title={Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View}, 
+      author={Xianzu Wu, Zhenxin Ai, Harry Yang, Ser-Nam Lim, Jun Liu, Huan Wang},
+      journal={arXiv preprint arXiv:2503.12553},
+      url={https://arxiv.org/abs/2503.12553}, 
+      year={2025},
+}
 ```
 
 ## 📖Acknowledgement
