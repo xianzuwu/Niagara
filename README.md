@@ -277,11 +277,10 @@ bash evaluate.sh
 ## 📑BibTeX
 ```
 @article{wu2025niagara,
-      title={Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View}, 
-      author={Xianzu Wu, Zhenxin Ai, Harry Yang, Ser-Nam Lim, Jun Liu, Huan Wang},
-      journal={arXiv preprint arXiv:2503.12553},
-      url={https://arxiv.org/abs/2503.12553}, 
-      year={2025},
+  title={Niagara: Normal-Integrated Geometric Affine Field for Scene Reconstruction from a Single View},
+  author={Wu, Xianzu and Ai, Zhenxin and Yang, Harry and Lim, Ser-Nam and Liu, Jun and Wang, Huan},
+  journal={arXiv preprint arXiv:2503.12553},
+  year={2025}
 }
 ```
 
